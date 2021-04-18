@@ -2,7 +2,7 @@
  Reproducing FHMs "skattning av det momentana reproduktionstalet"
 
 ##  About
-The idea behind this repo is to show how little effort FHM put into their R-estimate.
+The idea behind this repo is to show how little effort it takes to reproduce the R-number estimate the FHM published.
 
 ## CODE
 In short, this is the code needed to replicate their results.
