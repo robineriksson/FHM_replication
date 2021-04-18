@@ -7,7 +7,7 @@ Estimating the reproduction number of an active pandemic can be
 tough. However, with simple available tools one can produce estimates
 that potentially aren't that far from the truth.
 
-However, as for active pandemics, formating the data and tune the
+On this problem, as for active pandemics, formating the data and tune the
 models is usually the problem. In this short code sample, I aim to
 show how one can simply reproduce number similar to what the Public
 Health Agency Of Sweden has publiced here
