@@ -11,7 +11,7 @@ However, as for active pandemics, formating the data and tune the
 models is usually the problem. In this short code sample, I aim to
 show how one can simply reproduce number similar to what the Public
 Health Agency Of Sweden has publiced here
-[FHM][https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/statistik-och-analyser/analys-och-prognoser/].
+<https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/statistik-och-analyser/analys-och-prognoser/>
 
 ## CODE
 In short, this is the code needed to replicate their results.
