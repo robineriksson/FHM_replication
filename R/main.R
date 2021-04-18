@@ -12,6 +12,7 @@ library(EpiEstim)
 
 ##' Get the incidence data
 ##' @param start starting date
+##' @param region specify the region
 ##' @return data frame of incidence
 loadData <- function(start="2021/03/19",region="Sweden") {
     file = paste(getwd(), "..", "data",  "Folkhalsomyndigheten_Covid19.xlsx", sep="/")
@@ -27,6 +28,11 @@ loadData <- function(start="2021/03/19",region="Sweden") {
 
 }
 
+##' Compute the R-number and create the plot
+##' @param region specific region to use data from
+##' @param roll if rolling mean on incidence
+##' @param fixed if the parameters in the Gamma dist are uncertain or not
+##' @return ggplot with incidence and R
 compute <- function(region="Uppsala", roll=FALSE,fixed=TRUE) {
     df <- loadData("2020/08/01", region=region)
     if (roll)
@@ -75,18 +81,21 @@ compute <- function(region="Uppsala", roll=FALSE,fixed=TRUE) {
     return(p)
 }
 
+##' Base case
 FHM <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=FALSE,
                    fixed=TRUE))
 }
 
+##' Rolling mean
 FHM_roll <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=TRUE,
                    fixed=TRUE))
 }
 
+##' Uncertain paramaters
 FHM_uc <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=FALSE,
@@ -94,6 +103,7 @@ FHM_uc <- function(region="Uppsala") {
 
 }
 
+##' Uncertain parameters and rolling mean
 FHM_uc_roll <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=TRUE,

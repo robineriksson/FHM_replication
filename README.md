@@ -15,12 +15,16 @@ res <- estimate_R(df$incidence,
                   config = config)
  ```
 
+Which will give you
+![FHM replicate](/fig/FHM.png "FHM replicate")
+for the region of Uppsala.
+
 See the full code under `/R/` and the data is found in `/data/` the
 figures produced can be found under `/fig/`.
 
 ## Suggestions
 The noisy incidence creates poor estimates, what we can do to address
-this we can use
+this we can use (all are for Uppsala, one can change region in the code)
 * rolling mean on the data
 ![Rolling mean](/fig/FHM_roll.png "Rolling mean")
 * uncertainty in the gamma distribution.
