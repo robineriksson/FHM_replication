@@ -6,13 +6,14 @@ The idea behind this repo is to show how little effort FHM put into their R-esti
 
 ## CODE
 In short, this is the code needed to replicate their results.
-`  config <- make_config(list(
+```  config <- make_config(list(
             mean_si = 4.8,
             std_si = 2.3))
    method <- "parametric_si"
    res <- estimate_R(df$incidence,
                      method=method,
-                     config = config)`
+                     config = config)
+                     ```
 
 See the full code under `/R/` and the data is found in `/data/` the
 figures produced can be found under `/fig/`.
