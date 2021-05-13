@@ -81,7 +81,20 @@ compute <- function(region="Uppsala", roll=FALSE,fixed=TRUE) {
     return(list("plot"=p,"table"=df))
 }
 
+##' ***********************************
+##' Below follows 4 cases.
+##' 1) base case, replicate FHM
+##' 2) smooth the incidence data
+##' 3) uncertainty in the exposed parameters
+##' 4) 2+3 together.
+##'
+##' Suggestion -> Go through each case and see how it affects the
+##' output prediciton. And finally, use case #4 for your predictions.
+##'
+
+
 ##' Base case
+##' @param region what region to make prediciton on
 FHM <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=FALSE,
@@ -89,6 +102,7 @@ FHM <- function(region="Uppsala") {
 }
 
 ##' Rolling mean
+##' @param region what region to make prediciton on
 FHM_roll <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=TRUE,
@@ -96,6 +110,7 @@ FHM_roll <- function(region="Uppsala") {
 }
 
 ##' Uncertain paramaters
+##' @param region what region to make prediciton on
 FHM_uc <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=FALSE,
@@ -104,6 +119,7 @@ FHM_uc <- function(region="Uppsala") {
 }
 
 ##' Uncertain parameters and rolling mean
+##' @param region what region to make prediciton on
 FHM_uc_roll <- function(region="Uppsala") {
     return(compute(region=region,
                    roll=TRUE,
