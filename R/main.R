@@ -78,7 +78,7 @@ compute <- function(region="Uppsala", roll=FALSE,fixed=TRUE) {
         ylim(c(0,3))
 
     p <- grid.arrange(pi,pr,nrow=2)
-    return(p)
+    return(list("plot"=p,"table"=df))
 }
 
 ##' Base case
